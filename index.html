@@ -402,6 +402,124 @@ h2 {
     line-height: 1.5;
 }
  
+/* ---------- Beehiiv form override — styles the injected form to match the manuscript page (cream/ink/orange) ---------- */
+.beehiiv-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 180px;
+}
+ 
+/* Override Beehiiv's black container — let our .gate container show through */
+.beehiiv-wrap > *,
+.beehiiv-wrap > div,
+.beehiiv-wrap > div > *,
+.beehiiv-wrap form {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+ 
+/* The form itself — stack input + button vertically, full width */
+.beehiiv-wrap form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 0 !important;
+}
+ 
+/* Email input — cream/light to match page */
+.beehiiv-wrap input[type="email"] {
+    background: var(--off-white) !important;
+    background-color: var(--off-white) !important;
+    border: 1.5px solid var(--ink) !important;
+    color: var(--ink) !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    padding: 18px 20px !important;
+    border-radius: 0 !important;
+    min-height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    line-height: 1.4 !important;
+    box-shadow: none !important;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+ 
+.beehiiv-wrap input[type="email"]:focus {
+    border-color: var(--orange) !important;
+    box-shadow: 0 0 0 2px rgba(232, 106, 42, 0.2) !important;
+    outline: none !important;
+}
+ 
+.beehiiv-wrap input[type="email"]::placeholder {
+    color: var(--muted) !important;
+    opacity: 1 !important;
+}
+ 
+/* Submit button — matches the page CTA orange */
+.beehiiv-wrap button[type="submit"],
+.beehiiv-wrap [type="submit"] {
+    background: var(--orange) !important;
+    background-color: var(--orange) !important;
+    background-image: none !important;
+    color: #fff !important;
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 18px 24px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    min-height: auto !important;
+    transition: background 0.15s ease !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    box-shadow: none !important;
+}
+ 
+.beehiiv-wrap button[type="submit"]:hover,
+.beehiiv-wrap button[type="submit"]:focus-visible,
+.beehiiv-wrap [type="submit"]:hover,
+.beehiiv-wrap [type="submit"]:focus-visible {
+    background: var(--orange-dark) !important;
+    background-color: var(--orange-dark) !important;
+    outline: none !important;
+}
+ 
+/* Hide any Beehiiv-injected header/title/subtitle/label competing with our copy */
+.beehiiv-wrap [class*="header"],
+.beehiiv-wrap [class*="title"],
+.beehiiv-wrap [class*="subtitle"],
+.beehiiv-wrap label {
+    display: none !important;
+}
+ 
+/* Success message — when they submit, Beehiiv replaces the form with success text */
+.beehiiv-wrap [class*="success"],
+.beehiiv-wrap [class*="thank"] {
+    color: var(--ink) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    padding: 20px 0 !important;
+    background: transparent !important;
+}
+ 
 /* Closing whisper */
 .whisper {
     text-align: center;
