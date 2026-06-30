@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The raw version of the manuscript. Chapter 1 free.">
+<title>The Manuscript You Weren't Supposed to Find</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="The Manuscript You Weren't Supposed to Find">
+<meta property="og:description" content="A psychologist said something he probably shouldn't have. Read Chapter 1 free.">
+<meta property="og:type" content="article">
+
+<!-- Fonts: matches book.benoitmalige.com — Playfair Display + DM Sans + Caveat for handwritten -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Microsoft Clarity (same as other Protocol funnel pages) -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xcudcxad3b");
+</script>
+
+<style>
+/* Palette matches book.benoitmalige.com exactly so the transition feels like the same world */
+:root {
+    --black: #0c0c0c;
+    --off-white: #f7f5f2;
+    --warm-white: #faf9f7;
+    --light-gray: #eeece9;
+    --ink: #1c1c1c;
+    --muted: #707070;
+    --rule: #dedbd6;
+    --orange: #e86a2a;
+    --orange-dark: #c45520;
+    --orange-light: #f08040;
+    --red-pen: #b53a1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--off-white);
+    color: var(--ink);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+
+@media (max-width: 600px) {
+    body { font-size: 16px; line-height: 1.6; }
+    main { padding: 40px 20px 60px; }
+}
+
+/* Eyebrow at top */
+.eyebrow {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.3px;
+}
+
+/* Hero title — Playfair Display, same family as book page H1s */
+h1.title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.05;
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+    color: var(--ink);
+}
+
+@media (max-width: 600px) {
+    h1.title { font-size: 36px; }
+}
+
+.title-underline {
+    width: 64px;
+    height: 2px;
+    background: var(--ink);
+    margin: 0 auto 56px;
+    opacity: 0.4;
+}
+
+/* Body */
+p {
+    margin-bottom: 22px;
+    color: var(--ink);
+}
+
+p strong { font-weight: 600; }
+
+.lead {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--ink);
+    margin: 28px 0;
+}
+
+@media (max-width: 600px) {
+    .lead { font-size: 20px; }
+}
+
+/* The psychologist's quoted lines */
+blockquote {
+    margin: 28px 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--ink);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink);
+}
+
+blockquote.tight { margin: 14px 0; }
+
+@media (max-width: 600px) {
+    blockquote { font-size: 18px; padding-left: 18px; }
+}
+
+/* Section headings — Playfair, matches book page treatment */
+h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.15;
+    margin: 64px 0 24px;
+    color: var(--ink);
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 600px) {
+    h2 { font-size: 26px; margin: 52px 0 20px; }
+}
+
+/* Section label — DM Sans small caps, matches book page eyebrows */
+.section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin: 64px 0 12px;
+    display: block;
+}
+
+/* Recognition bullet lists */
+.recognition-list {
+    list-style: none;
+    margin: 28px 0 32px;
+    padding: 0;
+}
+
+.recognition-list li {
+    position: relative;
+    padding-left: 42px;
+    margin-bottom: 18px;
+    color: var(--ink);
+}
+
+/* The printed checkbox — faint ink outline, sits in the gutter */
+.recognition-list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    opacity: 0.55;
+}
+
+/* The handwritten check drawn on top of the box */
+.recognition-list li::after {
+    content: "✓";
+    position: absolute;
+    left: -2px;
+    top: -6px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--ink);
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Each check at a slightly different angle so they feel hand-drawn one at a time */
+.recognition-list li:nth-child(1)::after { transform: rotate(-11deg); }
+.recognition-list li:nth-child(2)::after { transform: rotate(-6deg); }
+.recognition-list li:nth-child(3)::after { transform: rotate(-13deg); }
+.recognition-list li:nth-child(4)::after { transform: rotate(-8deg); }
+.recognition-list li:nth-child(5)::after { transform: rotate(-12deg); }
+.recognition-list li:nth-child(6)::after { transform: rotate(-7deg); }
+.recognition-list li:nth-child(7)::after { transform: rotate(-10deg); }
+
+@media (prefers-reduced-motion: reduce) {
+    .recognition-list li::after { transform: none !important; }
+}
+
+/* Screenshot containers */
+.screenshot {
+    margin: 50px -24px;
+    position: relative;
+}
+
+.screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow:
+        0 1px 2px rgba(0,0,0,0.08),
+        0 8px 28px rgba(0,0,0,0.10),
+        0 24px 50px rgba(0,0,0,0.06);
+}
+
+.screenshot.tilt-left { transform: rotate(-1.1deg); }
+.screenshot.tilt-right { transform: rotate(0.7deg); }
+
+.screenshot-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 19px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 18px;
+    padding: 0 24px;
+    font-style: italic;
+}
+
+@media (min-width: 700px) {
+    .screenshot { margin: 50px -40px; }
+}
+
+/* Handwritten signature element — dark ink, matches the real annotations in the screenshots */
+.handwritten-block {
+    font-family: 'Caveat', cursive;
+    color: var(--ink);
+    font-size: 30px;
+    line-height: 1.1;
+    text-align: center;
+    margin: 36px 0;
+    transform: rotate(-1.3deg);
+}
+
+.handwritten-block::before {
+    content: "↘ ";
+    margin-right: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .handwritten-block { transform: none; }
+}
+
+/* Pull-quote — orange accent rule, matches book page style */
+.pull {
+    margin: 48px 0;
+    padding: 0 0 0 24px;
+    border-left: 3px solid var(--orange);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: var(--ink);
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .pull { font-size: 19px; }
+}
+
+/* The door section — bordered top and bottom, the strongest beat */
+.door-section {
+    margin: 64px 0;
+    padding: 36px 0;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+
+.door-section p {
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+/* The gate — chapter download container */
+.gate {
+    margin: 64px 0 40px;
+    padding: 48px 30px 40px;
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    position: relative;
+}
+
+.gate::before {
+    content: "Chapter 1";
+    position: absolute;
+    top: -14px;
+    left: 22px;
+    background: var(--off-white);
+    padding: 0 12px;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: var(--ink);
+    transform: rotate(-2deg);
+}
+
+.gate h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    color: var(--ink);
+}
+
+@media (max-width: 600px) {
+    .gate h3 { font-size: 24px; }
+}
+
+.gate .gate-sub {
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 28px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Email capture form */
+.capture-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.capture-form input[type="email"] {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    padding: 16px 18px;
+    background: var(--off-white);
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.capture-form input[type="email"]:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 2px rgba(232, 106, 42, 0.2);
+}
+
+.capture-form button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 18px 24px;
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.capture-form button:hover,
+.capture-form button:focus-visible {
+    background: var(--orange-dark);
+    outline: none;
+}
+
+.capture-form .fine-print {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* Closing whisper */
+.whisper {
+    text-align: center;
+    margin: 56px 0 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .screenshot.tilt-left,
+    .screenshot.tilt-right { transform: none; }
+}
+
+::selection {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* Hero image — full bleed across viewport, sits above main column */
+.hero {
+    width: 100%;
+    max-height: 88vh;
+    overflow: hidden;
+    background: #0c0a08;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@media (max-width: 600px) {
+    .hero { max-height: 75vh; }
+}
+
+/* Pull the eyebrow + title closer to the hero on top */
+.hero + main {
+    padding-top: 48px;
+}
+
+@media (max-width: 600px) {
+    .hero + main {
+        padding-top: 36px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <img src="./manuscript_hero.png" alt="A glowing manuscript discovered in an attic" loading="eager" fetchpriority="high">
+</div>
+
+<main>
+
+<div class="eyebrow">passed quietly between people who were ready</div>
+
+<h1 class="title">The Manuscript<br>You Weren't<br>Supposed to Find</h1>
+<div class="title-underline"></div>
+
+<!-- OPENING SCENE -->
+
+<p class="lead">A psychologist once said something he probably shouldn't have:</p>
+
+<blockquote>"If people understood what's in that manuscript, most of them wouldn't need me anymore."</blockquote>
+
+<p>He didn't say it with pride. He said it with a kind of reverence. Like he knew the information in it was too sharp, too honest, too exposing.</p>
+
+<p>Someone at the table asked him what made it so different.</p>
+
+<p>He replied:</p>
+
+<blockquote>"Most books tell you how to feel better. This one shows you how your mind actually works. And once you see that, you can't hide from yourself anymore."</blockquote>
+
+<p>He explained that most people like the idea of clarity. They like the idea of confidence. They like the idea of change.</p>
+
+<p>But the one thing they fear most is seeing their own patterns clearly.</p>
+
+<p>Because once you see them, you can't blame anything else.</p>
+
+<p>That's what this manuscript does. It cuts through the stories you tell yourself, the excuses, the versions of "you" you've performed for years.</p>
+
+<p>Someone at the table whispered, <em>"Where do you even get something like that?"</em></p>
+
+<p>He stared for a moment, then said quietly:</p>
+
+<blockquote>"It's not a bookstore book. The published version isn't the same. This is the raw one. The one that explains fear, identity, loops, the architecture of the mind. It's the one I give people when nothing else works."</blockquote>
+
+<p>He paused again.</p>
+
+<blockquote class="tight">"Read it slowly. It has a way of changing you before you notice it happening."</blockquote>
+
+<!-- SCREENSHOT 1: His copy. The annotations. -->
+
+<div class="screenshot tilt-left">
+    <img src="./manuscript_page1.png" alt="A page from the manuscript with handwritten margin annotations">
+</div>
+<div class="screenshot-caption">his copy. the annotations are his.</div>
+
+<!-- WHAT THE MANUSCRIPT IS -->
+
+<span class="section-label">The Raw Version He Meant</span>
+
+<h2>This isn't a book.<br>It's a blueprint.</h2>
+
+<p>The blueprint you're not supposed to read unless you want your life turned upside down.</p>
+
+<p>Inside is the stuff that never makes it into therapy rooms or self-help shelves:</p>
+
+<ul class="recognition-list">
+    <li>how your brain predicts danger even when life is fine</li>
+    <li>how your identity was engineered without your permission</li>
+    <li>how you mistake fear for responsibility</li>
+    <li>how your childhood stories became your adult choices</li>
+    <li>how you stay loyal to pain that isn't yours</li>
+    <li>how your mind hides the truth from you</li>
+    <li>how every "block" you have follows the same pattern</li>
+</ul>
+
+<p>It's dangerous because it doesn't let you stay unconscious.</p>
+
+<p>Once you understand the mechanics of your mind, you can't unsee them. You can't unknow them. And you can't keep living the same life.</p>
+
+<p>This is why people say it's "dangerous." Not because it harms you, but because it removes the one thing making you miserable:</p>
+
+<p class="lead">your illusions.</p>
+
+<!-- WHY IT SPREADS -->
+
+<h2>Why this is spreading online<br>(and nowhere else)</h2>
+
+<p>The commercial world wants comfort. Bookstores want categories. Therapists want clients.</p>
+
+<p>This manuscript wants none of that.</p>
+
+<p>There is a published version. It's been edited, softened, made fit for a shelf. <strong>This is not that version.</strong> This is the original. The raw one. The one written before anyone told it to be more palatable.</p>
+
+<p>It exists here, in digital form, because people pass it to each other quietly, to the ones who are ready for it.</p>
+
+<p class="pull">That's why people whisper about it. That's why you're here reading this.</p>
+
+<!-- WHAT YOU'LL RECOGNIZE -->
+
+<span class="section-label">What you'll recognize immediately</span>
+
+<h2>You won't be reading it.<br>You'll be recognizing yourself.</h2>
+
+<p>Not passively. Clinically. Almost uncomfortably.</p>
+
+<p>You'll finally understand:</p>
+
+<ul class="recognition-list">
+    <li>why your mind goes quiet in public but loud when you're alone</li>
+    <li>why you overanalyze the people you care about</li>
+    <li>why decisions feel heavier than they should</li>
+    <li>why you keep repeating patterns you promised you wouldn't</li>
+    <li>why you freeze even when you know the right move</li>
+    <li>why you feel misaligned even when your life looks fine</li>
+    <li>why your thinking feels like a loop instead of a line</li>
+</ul>
+
+<p>It won't feel like advice. It will feel like someone turned the lights on inside your head.</p>
+
+<p>And once you see it, you can't go back to how you used to operate.</p>
+
+<!-- WHO WROTE IT -->
+
+<span class="section-label">Who wrote this</span>
+
+<h2>A former CEO who burned out<br>so hard he walked away from<br>the business he built.</h2>
+
+<p>What followed was two years of obsession. Neuroscience. Identity research. Emotional pattern mapping. The brutal work of rebuilding a mind from the inside out.</p>
+
+<p>Part researcher. Part survivor. Part mad scientist.</p>
+
+<p>This manuscript is what emerged from the rubble.</p>
+
+<!-- THE DOOR — strongest beat -->
+
+<div class="door-section">
+
+<span class="section-label" style="margin-top: 0;">The door only opens from one side</span>
+
+<p>If you're still reading, you already know something.</p>
+
+<p>You're not here for entertainment. You're here because your mind is tired of running in circles.</p>
+
+<p>Most people scroll past things like this. They tell themselves "later." But later is the prison.</p>
+
+<p>What you feel right now, that pull, that pressure in the chest, that's the part of you that's done being unconscious.</p>
+
+<p>If you want to understand yourself at a level most people never reach, this is where you step through.</p>
+
+</div>
+
+<!-- THE GATE — Chapter 1 setup -->
+
+<h2>But before I give you<br>the full map…</h2>
+
+<p>I need to see if you can handle Chapter 1 first.</p>
+
+<p>Not because it's dramatic. Because most people aren't ready to see the truth laid out this plainly.</p>
+
+<!-- SCREENSHOT 2: The chapter opener — moved here, right when the chapter is named -->
+
+<div class="screenshot tilt-right">
+    <img src="./manuscript_page2.png" alt="Chapter 1: The Hidden Cost of Comfort">
+</div>
+<div class="screenshot-caption">page 10. where it starts.</div>
+
+<p>Chapter 1 is the moment the manuscript stops being interesting and starts becoming personal.</p>
+
+<p>Most people say they felt exposed reading it. Not judged. Just finally seen.</p>
+
+<p>If you felt something when you read the pages above, that little sting in your chest, that wasn't discomfort.</p>
+
+<p>That was recognition. That was your mind whispering: <em>"this is about me."</em></p>
+
+<div class="handwritten-block">if you want to see it, this is where you do</div>
+
+<!-- THE CAPTURE FORM -->
+
+<div class="gate">
+    <h3>Read Chapter 1.<br>The Hidden Cost of Comfort.</h3>
+    <p class="gate-sub">Sent instantly. You'll also be added to <em>The Second Life</em>, a private letter for the ones who don't look away.</p>
+
+    <!-- BEEHIIV EMBED — REPLACE BEFORE DEPLOYING -->
+    <!-- Swap this form block with the actual Beehiiv iframe embed from book.benoitmalige.com -->
+
+    <form class="capture-form" action="https://embeds.beehiiv.com/PUBLICATION_ID" method="POST">
+        <input
+            type="email"
+            name="email"
+            placeholder="your email"
+            required
+            autocomplete="email"
+            spellcheck="false"
+        >
+        <button type="submit">Send me Chapter 1</button>
+        <div class="fine-print">No spam. One letter a week, plus occasional manuscript fragments. Unsubscribe anytime.</div>
+    </form>
+</div>
+
+<p class="whisper">Read it slowly.<br>It has a way of changing you before you notice it happening.</p>
+
+<footer>
+    © 2026 · benoitmalige.com
+</footer>
+
+</main>
+
+<script>
+if (window.location.hash === '#read') {
+    setTimeout(() => {
+        document.querySelector('.gate').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+}
+</script>
+
+</body>
+</html>
